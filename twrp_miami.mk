@@ -22,18 +22,18 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from bangkk device
-$(call inherit-product, device/motorola/bangkk/device.mk)
+# Inherit from miami device
+$(call inherit-product, device/motorola/miami/device.mk)
 
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := bangkk
+PRODUCT_RELEASE_NAME := miami
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := bangkk
-PRODUCT_NAME := twrp_bangkk
+PRODUCT_DEVICE := miami
+PRODUCT_NAME := twrp_miami
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := moto g(84) 5g
+PRODUCT_MODEL := edge 30 neo
 PRODUCT_MANUFACTURER := motorola
