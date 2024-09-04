@@ -45,19 +45,21 @@ ENABLE_SCHEDBOOST := true
 BOARD_PROVIDES_GPTUTILS := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
-                        earlycon=msm_geni_serial,0x04C8C000 \
-                        androidboot.hardware=qcom \
-                        androidboot.console=ttyMSM0 \
-                        androidboot.memcg=1 \
-                        lpm_levels.sleep_disabled=1 \
-                        video=vfb:640x400,bpp=32,memsize=3072000 \
-                        msm_rtb.filter=0x237 \
-                        service_locator.enable=1 \
-                        androidboot.hab.csv=0 \
-                        androidboot.hab.product=miami \
-                        androidboot.hab.cid=50 \
-                        firmware_class.path=/vendor/firmware_mnt/image \
+BOARD_KERNEL_CMDLINE := \
+    console=ttyMSM0,115200n8 \
+    earlycon=msm_geni_serial,0x04C8C000 \
+    androidboot.hardware=qcom \
+    androidboot.console=ttyMSM0 \
+    androidboot.memcg=1 \
+    lpm_levels.sleep_disabled=1 \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    msm_rtb.filter=0x237 \
+    service_locator.enable=1 \
+    androidboot.hab.csv=0 \
+    androidboot.hab.product=miami \
+    androidboot.hab.cid=50 \
+    firmware_class.path=/vendor/firmware_mnt/image
+
 # For the love of all that is holy, please do not include this in your ROM unless you really want TWRP to not work correctly!
 BOARD_KERNEL_CMDLINE += androidboot.fastboot=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
