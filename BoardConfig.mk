@@ -76,10 +76,10 @@ BOARD_DTB_OFFSET           := 0x01f00000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 
-#BOARD_KERNEL_SEPARATED_DTBO := true
-#BOARD_INCLUDE_RECOVERY_DTBO := true
-#TARGET_KERNEL_SOURCE := kernel/motorola/miami
-#TARGET_KERNEL_CONFIG := vendor/miami_defconfig
+# BOARD_KERNEL_SEPARATED_DTBO := true
+# BOARD_INCLUDE_RECOVERY_DTBO := true
+# TARGET_KERNEL_SOURCE := kernel/motorola/miami
+# TARGET_KERNEL_CONFIG := vendor/miami_defconfig
 
 BOARD_KERNEL_IMAGE_NAME := kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
@@ -203,7 +203,7 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
-#TW_NO_SCREEN_BLANK := true
+# TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_FASTBOOTD := true
 TW_HAS_EDL_MODE := true
 TW_Y_OFFSET := 115
@@ -245,6 +245,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 # For local builds only
 #
 # TWRP zip installer
+# See https://gerrit.twrp.me/c/android_build/+/5079 for details
 ifneq ($(wildcard bootable/recovery/installer/.),)
     USE_RECOVERY_INSTALLER := true
     RECOVERY_INSTALLER_PATH := bootable/recovery/installer
@@ -260,6 +261,3 @@ ifneq ($(wildcard device/common/version-info/.),)
         CUSTOM_TWRP_VERSION := $(shell date +%Y%m%d)-01
     endif
 endif
-#
-# end local build flags
-#

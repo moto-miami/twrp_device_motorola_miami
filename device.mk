@@ -25,13 +25,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# define hardware platform
-PRODUCT_PLATFORM := holi
+DEVICE_PATH := device/motorola/miami
+
+# Platform
+TARGET_BOARD_PLATFORM := holi
 
 # A/B support
 AB_OTA_UPDATER := true
-
-DEVICE_PATH := device/motorola/miami
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -73,7 +73,7 @@ TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
-    bootctrl.$(PRODUCT_PLATFORM).recovery
+    bootctrl.$(TARGET_BOARD_PLATFORM).recovery
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
