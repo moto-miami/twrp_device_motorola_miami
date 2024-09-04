@@ -31,7 +31,7 @@ PRODUCT_PLATFORM := holi
 # A/B support
 AB_OTA_UPDATER := true
 
-LOCAL_PATH := device/motorola/miami
+DEVICE_PATH := device/motorola/miami
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH)
 
 # QCOM Encryption
 PRODUCT_PACKAGES += \
