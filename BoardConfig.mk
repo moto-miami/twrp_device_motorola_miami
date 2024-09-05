@@ -232,7 +232,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_SYSTEM := system
 
 # Kernel module loading
-TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules/1.1)\")
+TW_LOAD_VENDOR_MODULES := "$(notdir $(wildcard $(DEVICE_PATH)/prebuilt/*.ko))"
 
 # Include decryption support
 TW_INCLUDE_CRYPTO := true
