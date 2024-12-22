@@ -184,6 +184,9 @@ TW_USE_FSCRYPT_POLICY := 1
 # Fix for copying *.ko
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# TWRP version string suffix
+TW_DEVICE_VERSION := miami+git$(shell git -C "$(DEVICE_PATH)" rev-parse HEAD | cut -c 1-8)
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
