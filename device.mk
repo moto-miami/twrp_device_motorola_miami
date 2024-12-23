@@ -103,3 +103,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 # Copy modules for depmod
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*.ko,$(DEVICE_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1)
+
+# Copy firmware
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*.*,$(DEVICE_PATH)/prebuilt/firmware,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware)
